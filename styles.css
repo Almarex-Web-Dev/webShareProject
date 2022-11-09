@@ -1,0 +1,152 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(210, 46%, 95%);
+  font-family: sans-serif;
+}
+
+.wrapper {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+}
+
+.card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.card .card__image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px 0 0 10px;
+}
+
+.profile__content {
+  padding: 30px;
+}
+
+.profile__content h1 {
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+.profile__content p {
+  color: hsl(212, 23%, 69%);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* profile wrapper */
+.profile__image-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* profile */
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(217, 19%, 35%);
+}
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.share__wrapper {
+  position: relative;
+}
+
+.share__options {
+  width: 200px;
+  background: hsl(217, 19%, 35%);
+  top: -70px;
+  right: -80px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 12px 7px;
+  border-radius: 7px;
+  visibility: hidden;
+}
+.share__options::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: hsl(217, 19%, 35%);
+  transform: rotate(45deg);
+}
+.share__options a {
+  margin-left: 10px;
+}
+.share__options img {
+  width: 15px;
+  height: auto;
+}
+
+.share__button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px;
+  /* font-weight: 1.3rem; */
+}
+.share__button svg {
+  fill: #6e8098;
+}
+
+.share__button:hover {
+  background: hsl(217, 19%, 35%);
+  transition: 250ms linear;
+}
+.share__button:hover svg {
+  fill: #fff;
+}
+.show__share-options {
+  visibility: visible;
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .wrapper {
+    width: 80%;
+  }
+  .card {
+    width: 100%;
+    flex-direction: column;
+  }
+  .card .card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+}
