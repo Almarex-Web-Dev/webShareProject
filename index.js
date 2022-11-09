@@ -11,9 +11,8 @@ shareButton.addEventListener('click', () => {
 })
 
 const link = 'https://preeminent-beijinho-af4596.netlify.app/'
-const msg = encodeURIComponent('Hey check out this article')
-const title = encodeURIComponent(document.querySelector('.title').textContent)
-console.log(title)
+const msg = 'Hey check out this article'
+
 
 const facebook = document.querySelector('.facebook')
 facebook.href = `https://www.facebook.com/sharer/sharer.php?u=${link}`
